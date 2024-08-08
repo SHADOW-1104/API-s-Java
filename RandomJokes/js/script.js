@@ -29,6 +29,24 @@ const getJoke = () => {
         })
 }
 
+
+
+// Agregar img desde el fetchig
+ // if (item.image) {
+ //                const imgElement = document.createElement('img');
+ //                imgElement.src = item.image;
+ //                imgElement.alt = 'Joke image';
+ //                imgElement.classList.add('joke-image'); // Opcional: para agregar estilos personalizados
+
+ //                // Asegurarte de limpiar cualquier imagen previa
+ //                const existingImg = jokeContainer.querySelector('img');
+ //                if (existingImg) {
+ //                    jokeContainer.removeChild(existingImg);
+ //                }
+
+ //                jokeContainer.appendChild(imgElement);
+ //            }
+
 // syntax  FETCH + TRY-CATCH
 
 // const getJoke = () =>{
