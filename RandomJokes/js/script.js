@@ -29,55 +29,43 @@ const getJoke = () => {
         })
 }
 
+// syntax  FETCH + TRY-CATCH
 
-// Peticion con FETCH + TRY-CATCH
-// const getJoke = () => {
-//     jokeContainer.classList.remove('fade');
-
+// const getJoke = () =>{
 //     fetch(API_URL)
-//         .then(response => {
-//             if (!response.ok) {
-//                 throw new Error('Problema con la API');
-//             }
-//             return response.json();
-//         })
-//         .then(item => {
-//             jokeContainer.textContent = `${item.joke}`;
-//             jokeContainer.classList.add('fade');
+//     .then(response => {
+//         if(!response.ok){
+//             throw new Error('Error en la peticion')
+//         }
+//         return response.json()
+//     })
+//     .then(data => {
+//         jokeContainer.textContent = data.joke
 
-//             const randomIcon = icons[Math.floor(Math.random() * icons.length)];
-//             icon.textContent = randomIcon;
-//         })
-//         .catch(error => {
-//             console.error('Error:', error);
-//             alert('No pudimos procesar tu petición');
-//         });
-// };
+//     }).catch(error => {
+//         console.error('Error de la API', error)
+//         alert('Algo salio mal')
+//     })
+// }
 
 
-// Peticion con ASYNC AWAIT + TRY-CATCH
-// const fetchJokes = async () => {
+// siyntax ASYNC AWAIT
+
+// const getJoke = async () => {
 //     try{
-//         jokeContainer.classList.remove('fade')
 //         const response = await fetch(API_URL)
 //         if(!response.ok){
-//             throw new Error("Problema con la API", error);
+//             throw new Error ('Error en la api')
 //         }
-//         const data = await response.json()
-//         jokeContainer.textContent = data.joke;
-//         jokeContainer.classList.add('fade')
-//         const randomIcon = icons[Math.floor(Math.random() * iconsCounter.length)]
-//         icon.textContent = randomIcon
-//         console.log(data.joke)
 
-//     }catch (error) {
-//         alert('No pudimos procesar tu peticion' , error)
+//         const data = await response.json()
+//         jokeContainer.textContent = data.joke
+//     }catch (error){
+//         console.error('Error',error)
+//         alert('Algo salio mal')
 //     }
 
 // }
-// btn.addEventListener('click', fetchJokes)
-// fetchJokes()
-
 
 
 btn.addEventListener('click', getJoke)
